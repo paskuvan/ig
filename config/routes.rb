@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users,
     path: '',
     path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
-    controllers: {omniauth_callbacks: 'omniauth_callbacks'}
- 
+    controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
+
+  #   get '/users/:id', to: 'users#show'
+ 	# /users/1 -> Users controller, show action, params {id: '1'}
+ 	resources :users, only: [:show]
 end
