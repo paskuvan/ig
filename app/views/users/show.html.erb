@@ -5,10 +5,12 @@
 	<div class="col-md-8">
 		<div class="row">
 			<p class="username"><%= @user.name %></p>
-			<button class="btn btn-outline-dark common-btn edit-profile"> Edit Profile</button>
+			<% if @user == current_user %>
+			<%= link_to "Edit Profile",edit_user_registration_path, class:"btn btn-outline-dark common-btn edit-profile-btn" %>
+			<button class="btn btn-outline-dark common-btn edit-profile-btn"> Edit Profile</button>
 			<!-- Button trigger modal -->
 			<button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal">
-			  
+			  <% end %>
 			</button>
 
 			<!-- Modal -->
@@ -28,7 +30,7 @@
 			      </div>
 			    </div>
 			  </div>
-			</div>
+			</div> 
 		</div>
 		<div class="row">
 			<p class="email"><%= @user.email %></p>
