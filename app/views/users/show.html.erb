@@ -7,7 +7,6 @@
 			<p class="username"><%= @user.name %></p>
 			<% if @user == current_user %>
 			<%= link_to "Edit Profile",edit_user_registration_path, class:"btn btn-outline-dark common-btn edit-profile-btn" %>
-			<button class="btn btn-outline-dark common-btn edit-profile-btn"> Edit Profile</button>
 			<!-- Button trigger modal -->
 			<button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal">
 			  <% end %>
