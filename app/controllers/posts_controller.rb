@@ -4,8 +4,8 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all.limit(10).includes(:photos)
-		@post = Post.new #instance variable
-		post #local variable
+		@post = Post.new #instance
+		 #local variable
 	end
 
 	def create
